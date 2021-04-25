@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f5f5f5;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    padding: 60px 70px;
+}
+
+.bg::after {
+    content: "";
+    background-image: linear-gradient( 45deg, #8739ff, #e844ff);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    z-index: -1;
+    border-bottom-right-radius: 50%;
+}
+
+.phone {
+    height: 510px;
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: hsl(270, 20%, 96%);
+    border: 10px solid white;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: relative;
+}
+
+.phone .head {
+    height: 65px;
+    background-image: linear-gradient( to right, #8739ff, #e844ff);
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.phone .head::after {
+    content: "";
+    height: 30px;
+    width: 130px;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
+
+.user-info {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.user-info h3 {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.user-info p {
+    color: hsl(289, 100%, 72%);
+    margin-top: 3px;
+}
+
+.phone p {
+    color: hsl(289, 100%, 72%);
+    font-size: 0.4rem;
+}
+
+.ava {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.p-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.ava img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.images {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.images img {
+    width: 40px;
+    border-radius: 10px;
+}
+
+.f-right {
+    align-self: flex-end;
+}
+
+.dark {
+    background-color: #ECE6F2;
+    width: 125px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.white {
+    background-color: white;
+    width: 125px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+[type] {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: #3F2753;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 91.5%;
+    right: 8px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+/*----------------------------------------------------*/
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.text h2 {
+    color: hsl(271, 36%, 24%);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.text p {
+    line-height: 1.8;
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #CDCCCF;
+}
+
+@media (min-width:992px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .bg::after {
+        width: 75%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        height: 700px;
+    }
+    .text {
+        width: 50%;
+        text-align: left;
+        margin-top: 200px;
+    }
+    .text p {
+        margin: 20px 0 0 -150px;
+        width: 458px;
+    }
+    .text h2 {
+        margin: 20px 0 0 -150px
+    }
+    .phone {
+        margin-right: 200px;
+        margin-top: 50px;
+    }
+    .bg {
+        width: 50%;
+    }
+}
